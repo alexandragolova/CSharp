@@ -3,16 +3,13 @@
 {
     randomNumber=$(($RANDOM % 3))
     case $randomNumber in
-        "0")
-            echo -e "\e[5m\e[25m*"
-            ;;
         "1")
             echo -e "\e[31m*"
             ;;
         "2")
             echo -e "\e[32m*"
             ;;
-        "3")
+        "0")
             echo -e "\e[97m*"
             ;;
     esac
@@ -60,7 +57,7 @@ do
 done
 echo
 #Show: ЧНГ $year
-for i in $(seq 1 $stemSpace)
+for i in $(seq 1 $(($size -5)))
 do
     echo -n " "
 done
